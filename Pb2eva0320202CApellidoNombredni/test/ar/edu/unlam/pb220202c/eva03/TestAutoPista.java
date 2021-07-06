@@ -31,7 +31,7 @@ public class TestAutoPista {
 	public void queAlIntentarRegistrarUnVehiculoQueNoTieneTelepaseLanceUnaExcepcion() throws VehiculoNotFoundException {
 		
 		Vehiculo autoDeGabi = new Automovil ("AZ001NA", (Integer)50, (Integer)80);
-		@SuppressWarnings("unused")
+		
 		Vehiculo autoDeMati = new Automovil ("MAA001", (Integer)170, (Integer)80);
 		Vehiculo autoDeBruno = new Camion ("AAA000", (Integer)170, (Integer)80, (Integer)8);
 		Autopista accesoOeste = new Autopista();
