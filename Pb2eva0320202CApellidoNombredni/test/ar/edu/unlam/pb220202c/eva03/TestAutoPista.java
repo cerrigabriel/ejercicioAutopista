@@ -37,7 +37,7 @@ public class TestAutoPista {
 		Autopista accesoOeste = new Autopista();
 		accesoOeste.registrarTelepase((Integer)1, autoDeGabi);
 		accesoOeste.registrarTelepase((Integer)2, autoDeBruno);
-		
+		//
 		assertFalse(accesoOeste.ingresarAutopista((Integer)3));
 		
 	}
