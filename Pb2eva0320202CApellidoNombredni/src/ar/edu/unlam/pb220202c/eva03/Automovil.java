@@ -23,6 +23,13 @@ public class Automovil extends Vehiculo{
 		}
 		return false;
 	}
+
+	@Override
+	public int compareTo(Vehiculo o) {
+		// TODO Auto-generated method stub
+		return this.getPatente().compareTo(o.getPatente());
+	}
+	
 	
    
 	

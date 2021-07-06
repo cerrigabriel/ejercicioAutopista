@@ -34,18 +34,27 @@ public class Autopista {
 		
 	}
 	
-	public void salirAutpista (Vehiculo vehiculo) {
-		//lanza Una exception VehiculoNotFounException si no esta en circulacion
+	public void salirAutopista (Vehiculo vehiculo) {
+		//lanza Una exception VehiculoNotFoundException si no esta en circulacion
+		if(vehiculosEnCirculacion.contains(vehiculo)) {
+			vehiculosEnCirculacion.remove(vehiculo);
+		}
 		
 	}
 	
 	public TreeSet<Vehiculo> obtenerVehiculosConExcesosDeVelocidadOrdenadosPorPatente(){
-	
-	return null;
+		
+		TreeSet<Vehiculo> vehiculosEnInfraccion = new TreeSet<>();
+		for (Vehiculo vehiculo : vehiculosEnCirculacion) {
+			if(vehiculo.enInfraccion()) {
+				vehiculosEnInfraccion.add(vehiculo);
+			}
+		}
+		return vehiculosEnInfraccion;
     }
 
 	public Integer cantidadDeVehiculosENCirculacion() {
 	
-		return 0;
+		return this.vehiculosEnCirculacion.size();
 }
 	}
